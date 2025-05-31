@@ -20,6 +20,8 @@ marker_dict = aruco.getPredefinedDictionary(aruco.DICT_5X5_250)
 param_markers = aruco.DetectorParameters()
 
 cap = cv.VideoCapture(0)
+cap.set(cv.CAP_PROP_FRAME_WIDTH, 640)
+cap.set(cv.CAP_PROP_FRAME_HEIGHT, 480)
 
 while True:
     ret, frame = cap.read()

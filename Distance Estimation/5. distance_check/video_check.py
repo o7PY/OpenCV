@@ -14,6 +14,8 @@ param_markers = aruco.DetectorParameters()
 
 # Setup video capture
 cap = cv.VideoCapture(0)
+cap.set(cv.CAP_PROP_FRAME_WIDTH, 640)
+cap.set(cv.CAP_PROP_FRAME_HEIGHT, 480)
 
 # Define video writer (adjust resolution as needed)
 frame_width = int(cap.get(cv.CAP_PROP_FRAME_WIDTH))

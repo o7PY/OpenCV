@@ -11,6 +11,9 @@ param_markers = aruco.DetectorParameters()
 # utilizes default camera/webcam driver
 cap = cv.VideoCapture(0)
 
+cap.set(cv.CAP_PROP_FRAME_WIDTH, 640)
+cap.set(cv.CAP_PROP_FRAME_HEIGHT, 480)
+
 # iterate through multiple frames, in a live video feed
 while True:
     ret, frame = cap.read()
